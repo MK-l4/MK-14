@@ -1,0 +1,178 @@
+﻿{
+  "log": {
+    "loglevel": "none"
+  },
+  "dns": {
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "listen": "0.0.0.0",
+      "port": 10808,
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      }
+    },
+    {
+      "tag": "http",
+      "listen": "0.0.0.0",
+      "port": 10809,
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
+      "settings": {
+        "auth": "noauth"
+      }
+    }
+  ],
+  "meta": {
+    "serverDescription": "⚡️ Когда сеть доступна"
+  },
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "tag": "proxy",
+      "settings": {
+        "vnext": [
+          {
+            "address": "playtime.servergate.cdnnow.xyz",
+            "port": 443,
+            "users": [
+              {
+                "id": "4d4df050-688b-4117-a40f-954aeeed4f18",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "playtime.servergate.cdnnow.xyz",
+          "fingerprint": "firefox",
+          "alpn": [
+            "h2"
+          ]
+        },
+        "xhttpSettings": {
+          "mode": "packet-up",
+          "path": "\/black\/api\/.well_known\/v3\/sequence\/ob7va7vq6.pp7",
+          "host": "playtime.servergate.cdnnow.xyz",
+          "extra": {
+            "scMaxEachPostBytes": "262144-786432",
+            "scMinPostsIntervalMs": "0",
+            "xPaddingBytes": "48-256",
+            "xPaddingObfsMode": true,
+            "xPaddingKey": "q",
+            "xPaddingPlacement": "query",
+            "xPaddingMethod": "tokenish",
+            "uplinkHTTPMethod": "DELETE",
+            "sessionIDPlacement": "query",
+            "sessionIDKey": "sid",
+            "seqPlacement": "query",
+            "seqKey": "offset"
+          }
+        }
+      }
+    },
+    {
+      "tag": "DIRECT",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "BLOCK",
+      "protocol": "blackhole"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "type": "field",
+        "protocol": [
+          "bittorrent"
+        ],
+        "outboundTag": "BLOCK"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:(^|\\.)ya\\.ru$",
+          "regexp:(^|\\.)yandex\\.(ru|net)$",
+          "regexp:(^|\\.)dzen\\.ru$",
+          "regexp:(^|\\.)mail\\.ru$",
+          "regexp:(^|\\.)vk\\.com$",
+          "regexp:(^|\\.)vkvideo\\.ru$",
+          "regexp:(^|\\.)ok\\.ru$",
+          "regexp:(^|\\.)rutube\\.ru$",
+          "regexp:(^|\\.)rutube\\.com$",
+          "regexp:(^|\\.)rambler\\.ru$",
+          "regexp:(^|\\.)lenta\\.ru$",
+          "regexp:(^|\\.)ria\\.ru$",
+          "regexp:(^|\\.)tass\\.ru$",
+          "regexp:(^|\\.)gazeta\\.ru$",
+          "regexp:(^|\\.)kommersant\\.ru$",
+          "regexp:(^|\\.)rg\\.ru$",
+          "regexp:(^|\\.)iz\\.ru$",
+          "regexp:(^|\\.)cnews\\.ru$",
+          "regexp:(^|\\.)habr\\.com$",
+          "regexp:(^|\\.)habr\\.ru$",
+          "regexp:(^|\\.)gosuslugi\\.ru$",
+          "regexp:(^|\\.)nalog\\.gov\\.ru$",
+          "regexp:(^|\\.)mos\\.ru$",
+          "regexp:(^|\\.)sber\\.ru$",
+          "regexp:(^|\\.)sberbank\\.ru$",
+          "regexp:(^|\\.)tbank\\.ru$",
+          "regexp:(^|\\.)tinkoff\\.ru$",
+          "regexp:(^|\\.)alfabank\\.ru$",
+          "regexp:(^|\\.)vtb\\.ru$",
+          "regexp:(^|\\.)ozon\\.ru$",
+          "regexp:(^|\\.)wildberries\\.ru$",
+          "regexp:(^|\\.)wb\\.ru$",
+          "regexp:(^|\\.)avito\\.ru$",
+          "regexp:(^|\\.)2gis\\.ru$",
+          "regexp:(^|\\.)cdek\\.ru$",
+          "regexp:(^|\\.)pochta\\.ru$",
+          "regexp:(^|\\.)consultant\\.ru$",
+          "regexp:(^|\\.)garant\\.ru$",
+          "regexp:(^|\\.)kino\\.ru$",
+          "regexp:(^|\\.)kinopoisk\\.ru$",
+          "regexp:(^|\\.)music\\.yandex\\.(ru|net)$",
+          "regexp:(^|\\.)disk\\.yandex\\.(ru|net)$",
+          "regexp:(^|\\.).*\\.ru$",
+          "regexp:(^|\\.).*\\.рф$",
+          "regexp:(^|\\.).*\\.su$"
+        ],
+        "outboundTag": "DIRECT"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "DIRECT"
+      }
+    ]
+  },
+  "remarks": "🇪🇺 LTE | Резерв | 1x трафик #2"
+}
