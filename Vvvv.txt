@@ -1,24 +1,259 @@
-#profile-title: V2hub FREE🌒
-#profile-update-interval: 1
-#subscription-userinfo: upload=0; download=0; total=107374182400000; expire=1788257518
-#support-url: tg://user?id=8825789229
-#profile-web-page-url: https://t.me/V2hubLink
-#profile-test-interval: 300
-#profile-auto-switch: true
-#profile-allow-copy: false
-#profile-locked: true
-#profile-read-only: true
-#profile-prefer-ipv4: true
-#auto-continue: true
-#sort-order: ping
-#subscription-pin: 1
-#subscriptions-collapse: 0
-#hide-settings: 1
-#per-app-proxy-mode: bypass
-#per-app-proxy-list: ru.oneme.app,ru.rostel,ru.gosuslugi.dom,ru.gosuslugi.auto,ru.gosuslugi.pos,ru.russianpost.client,com.octopod.russianpost.client.android,ru.crpt.mark,io.citizens.security,ru.fns.nalog,com.gnivc.selfemployed,ru.rddm.app,ru.rsv.app,ru.beeline.services,ru.megafon.mlk,ru.mts.mymts,ru.tele2.mytele2,com.rostelecom.my,ru.motivtelecom.lk,com.ertelecom.mydomru,ru.cbr.cbonline,ru.nspk.sbpay,ru.nspk.mir.loyalty,ru.nspk.mirpay,ru.vtb24.mobilebanking,ru.psbank.mb,ru.alfabank.mobile.android,ru.gazprombank.android.mobilebank.app,ru.mts.money,com.moex.iss,com.vkontakte.android,ru.vk.video,com.uma.musicvk,com.vk.vkvideo,com.vk.im,com.vk.love,ru.vk.store,ru.vk.store.tv,ru.ok.android,ru.mail.mailapp,ru.yandex.searchplugin,ru.yandex.music,ru.kinopoisk,ru.rutube.app,com.yandex.zen,ru.zen.android,ru.rian.offline,ru.itar_tass.tass,ru.rbc.news,ru.kommersant.app,ru.iz.news,ru.kp.awp,com.vgtrk.smotrim,com.channelone.live,com.rt.mobile.russian,ru.ozon.app.android,com.wildberries.ru,com.avito.android,ru.yandex.market,ru.beru.android,ru.megamarket.marketplace,pro.cdek.client,ru.instamart,ru.samokat.client,ru.sbcs.store,ru.mcdonalds.android,com.apegroup.mcdonaldsrussia,ru.burgerking,ru.vkusvill,ru.pyaterochka.app,ru.perekrestok.app,ru.tander.magnit,ru.auchan,com.metro.ru,ru.rzd.pass,ru.aeroflot,com.pobeda.app,ru.tutu.avia,ru.tutu.trains,ru.dublgis.dgismobile,ru.yandex.taxi,ru.yandex.yandexmaps,ru.foodfox.client,com.taximaxim,ru.citydrive.app,com.carshering,ru.dellin.app,ru.domclick.app,ru.hh.android,com.gismeteo.client
-#announce:Статус подписки: ✅ Осталось ♾️ | 📲 Создатель @V2hubLink | Телеграм канал с новостями @V2hubLink | СЛИВАТЬ НЕЛЬЗЯ!
-vless://9aff0732-7ce4-4b34-ba20-e67c6df64fdd@94.183.157.200:443?flow=xtls-rprx-vision&type=tcp&headerType=none&security=reality&fp=firefox&sni=pol1.panel11.ru&pbk=1FryqGmMpa7T_bHmy3Uy11C5GWe6F2uzcsCYa9QXJBw&sid=ff993907a731979a#%F0%9F%87%AA%F0%9F%87%BAWIFI%20-%20%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%E2%9A%A1%EF%B8%8F
-vless://9aff0732-7ce4-4b34-ba20-e67c6df64fdd@94.183.157.200:443?flow=xtls-rprx-vision&type=tcp&headerType=none&security=reality&fp=firefox&sni=pol1.panel11.ru&pbk=1FryqGmMpa7T_bHmy3Uy11C5GWe6F2uzcsCYa9QXJBw&sid=ff993907a731979a#%F0%9F%87%AE%F0%9F%87%B7Iran%20-%20Wifi%20%E2%9A%A1%EF%B8%8F
-vless://9aff0732-7ce4-4b34-ba20-e67c6df64fdd@pol1.panel11.ru:443?flow=xtls-rprx-vision&type=tcp&headerType=none&security=reality&fp=firefox&sni=pol1.panel11.ru&pbk=1FryqGmMpa7T_bHmy3Uy11C5GWe6F2uzcsCYa9QXJBw&sid=ff993907a731979a#%F0%9F%87%AE%F0%9F%87%B7%D0%98%D1%80%D0%B0%D0%BD%20WIFI%202%20%E2%9A%A1%EF%B8%8F
-vless://e1299012-3d27-4b7f-99d5-25ccb7c63220@194.48.250.31:443?flow=&type=xhttp&host=www.google.com&path=/&mode=auto&security=reality&fp=qq&sni=www.google.com&pbk=sJTPQLMDCyPAbRcaJM-P8Y3_xRVpEEGrvv-kkIuIuQE#%F0%9F%87%A9%F0%9F%87%AAGermany%20-%20Wifi%20%E2%9A%A1%EF%B8%8F
-vless://97e967da-1d2b-439e-836b-a9d5a90496dc@31.129.42.239:443?flow=&type=grpc&mode=gun&serviceName=grpc8c948083b439&security=reality&fp=firefox&sni=vk.com&pbk=KwPeoAnP208rOsWWHSjhPKdpVzvIHpfBUltBHaBCSDs&sid=d9114354#%F0%9F%87%B7%F0%9F%87%BA%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F
+{
+  "dns" : {
+    "hosts" : {
+      "dns.google" : "8.8.8.8",
+      "hub-de-01.hanvpn.cc" : "77.110.117.199",
+      "hub-de-02.hanvpn.cc" : "144.31.215.48",
+      "hub-de-03.hanvpn.cc" : "81.90.25.158",
+      "hub-fi-01.hanvpn.cc" : "62.60.252.185",
+      "hub-fi-02.hanvpn.cc" : "31.76.240.172",
+      "hub-nl-01.hanvpn.cc" : "77.239.112.91",
+      "hub-pl-01.hanvpn.cc" : "191.44.113.220",
+      "hub-se-01.hanvpn.cc" : "191.44.114.35",
+      "hub-se-03.hanvpn.cc" : "194.238.57.219"
+    },
+    "queryStrategy" : "UseIPv4",
+    "servers" : [
+      "fakedns",
+      {
+        "address" : "localhost",
+        "domains" : [
+          "geosite:private"
+        ],
+        "skipFallback" : true
+      },
+      {
+        "address" : "https+local:\/\/dns.google\/dns-query",
+        "domains" : [
+          "geosite:category-ru",
+          "domain:ru",
+          "domain:su",
+          "domain:xn--p1ai"
+        ],
+        "skipFallback" : true
+      },
+      {
+        "address" : "https:\/\/dns.google\/dns-query",
+        "skipFallback" : false
+      }
+    ],
+    "tag" : "dns-proxy"
+  },
+  "fakedns" : {
+    "ipPool" : "198.18.0.0\/15",
+    "poolSize" : 65535
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "fakedns",
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "metadataOnly" : false,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "fakedns",
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "metadataOnly" : false,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/451E86E8-55F6-4CB5-9D2D-88CBE7C94285\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "observatory" : {
+    "enableConcurrency" : true,
+    "probeInterval" : "30s",
+    "probeURL" : "https:\/\/www.gstatic.com\/generate_204",
+    "subjectSelector" : [
+      "country"
+    ]
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "185.255.179.11",
+            "port" : 9443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "d9d0f208-d582-41d5-bb7b-742671402810"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "grpcSettings" : {
+          "authority" : "hub-lv-01.hanvpn.cc",
+          "mode" : false,
+          "serviceName" : "lv01-grpc-8e47a"
+        },
+        "network" : "grpc",
+        "security" : "tls",
+        "sockopt" : {
+          "tcpKeepAliveIdle" : 60,
+          "tcpKeepAliveInterval" : 15,
+          "tcpUserTimeout" : 120000
+        },
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "enableSessionResumption" : false,
+          "fingerprint" : "chrome",
+          "serverName" : "hub-lv-01.hanvpn.cc"
+        }
+      },
+      "tag" : "country"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "77.110.117.199",
+            "port" : 9443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "d9d0f208-d582-41d5-bb7b-742671402810"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "grpcSettings" : {
+          "authority" : "hub-lv-01.hanvpn.cc",
+          "mode" : false,
+          "serviceName" : "lv01-grpc-8e47a"
+        },
+        "network" : "grpc",
+        "security" : "tls",
+        "sockopt" : {
+          "tcpKeepAliveIdle" : 60,
+          "tcpKeepAliveInterval" : 15,
+          "tcpUserTimeout" : 120000
+        },
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "enableSessionResumption" : false,
+          "fingerprint" : "chrome",
+          "serverName" : "hub-lv-01.hanvpn.cc"
+        }
+      },
+      "tag" : "country-2"
+    },
+    {
+      "protocol" : "freedom",
+      "settings" : {
+        "domainStrategy" : "UseIPv4"
+      },
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    },
+    {
+      "protocol" : "dns",
+      "tag" : "dns-out"
+    }
+  ],
+  "remarks" : "🇱🇻 Латвия · gRPC · Авто",
+  "routing" : {
+    "balancers" : [
+      {
+        "fallbackTag" : "country",
+        "selector" : [
+          "country"
+        ],
+        "strategy" : {
+          "type" : "leastPing"
+        },
+        "tag" : "country"
+      }
+    ],
+    "domainStrategy" : "IPOnDemand",
+    "rules" : [
+      {
+        "inboundTag" : [
+          "socks",
+          "http"
+        ],
+        "outboundTag" : "dns-out",
+        "port" : "53",
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "country",
+        "inboundTag" : [
+          "dns-proxy"
+        ],
+        "type" : "field"
+      },
+      {
+        "domain" : [
+          "geosite:private",
+          "geosite:category-ru",
+          "domain:ru",
+          "domain:su",
+          "domain:xn--p1ai"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "ip" : [
+          "geoip:private",
+          "geoip:ru"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "country",
+        "network" : "tcp,udp",
+        "type" : "field"
+      }
+    ]
+  }
+}
