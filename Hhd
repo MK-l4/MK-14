@@ -1,0 +1,259 @@
+{
+  "dns" : {
+    "hosts" : {
+      "dns.google" : "8.8.8.8",
+      "hub-de-01.hanvpn.cc" : "77.110.117.199",
+      "hub-de-02.hanvpn.cc" : "144.31.215.48",
+      "hub-de-03.hanvpn.cc" : "81.90.25.158",
+      "hub-fi-01.hanvpn.cc" : "62.60.252.185",
+      "hub-fi-02.hanvpn.cc" : "31.76.240.172",
+      "hub-nl-01.hanvpn.cc" : "77.239.112.91",
+      "hub-pl-01.hanvpn.cc" : "191.44.113.220",
+      "hub-se-01.hanvpn.cc" : "191.44.114.35",
+      "hub-se-03.hanvpn.cc" : "194.238.57.219"
+    },
+    "queryStrategy" : "UseIPv4",
+    "servers" : [
+      "fakedns",
+      {
+        "address" : "localhost",
+        "domains" : [
+          "geosite:private"
+        ],
+        "skipFallback" : true
+      },
+      {
+        "address" : "https+local:\/\/dns.google\/dns-query",
+        "domains" : [
+          "geosite:category-ru",
+          "domain:ru",
+          "domain:su",
+          "domain:xn--p1ai"
+        ],
+        "skipFallback" : true
+      },
+      {
+        "address" : "https:\/\/dns.google\/dns-query",
+        "skipFallback" : false
+      }
+    ],
+    "tag" : "dns-proxy"
+  },
+  "fakedns" : {
+    "ipPool" : "198.18.0.0\/15",
+    "poolSize" : 65535
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "fakedns",
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "metadataOnly" : false,
+        "routeOnly" : false
+      },
+      "tag" : "socks"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "allowTransparent" : false
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "fakedns",
+          "http",
+          "tls",
+          "quic"
+        ],
+        "enabled" : true,
+        "metadataOnly" : false,
+        "routeOnly" : false
+      },
+      "tag" : "http"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/451E86E8-55F6-4CB5-9D2D-88CBE7C94285\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "loglevel" : "Warning"
+  },
+  "observatory" : {
+    "enableConcurrency" : true,
+    "probeInterval" : "30s",
+    "probeURL" : "https:\/\/www.gstatic.com\/generate_204",
+    "subjectSelector" : [
+      "country"
+    ]
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "31.76.226.100",
+            "port" : 9443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "d9d0f208-d582-41d5-bb7b-742671402810"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "sockopt" : {
+          "tcpKeepAliveIdle" : 60,
+          "tcpKeepAliveInterval" : 15,
+          "tcpUserTimeout" : 120000
+        },
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "enableSessionResumption" : false,
+          "fingerprint" : "chrome",
+          "serverName" : "hub-ee-01.hanvpn.cc"
+        },
+        "xhttpSettings" : {
+          "host" : "hub-ee-01.hanvpn.cc",
+          "mode" : "auto",
+          "path" : "\/ee01-xhttp-8e47a\/"
+        }
+      },
+      "tag" : "country"
+    },
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "185.255.179.11",
+            "port" : 9443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "d9d0f208-d582-41d5-bb7b-742671402810"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "xhttp",
+        "security" : "tls",
+        "sockopt" : {
+          "tcpKeepAliveIdle" : 60,
+          "tcpKeepAliveInterval" : 15,
+          "tcpUserTimeout" : 120000
+        },
+        "tlsSettings" : {
+          "alpn" : [
+            "h2"
+          ],
+          "enableSessionResumption" : false,
+          "fingerprint" : "chrome",
+          "serverName" : "hub-ee-01.hanvpn.cc"
+        },
+        "xhttpSettings" : {
+          "host" : "hub-ee-01.hanvpn.cc",
+          "mode" : "auto",
+          "path" : "\/ee01-xhttp-8e47a\/"
+        }
+      },
+      "tag" : "country-2"
+    },
+    {
+      "protocol" : "freedom",
+      "settings" : {
+        "domainStrategy" : "UseIPv4"
+      },
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    },
+    {
+      "protocol" : "dns",
+      "tag" : "dns-out"
+    }
+  ],
+  "remarks" : "🇪🇪 Эстония · XHTTP · Авто",
+  "routing" : {
+    "balancers" : [
+      {
+        "fallbackTag" : "country",
+        "selector" : [
+          "country"
+        ],
+        "strategy" : {
+          "type" : "leastPing"
+        },
+        "tag" : "country"
+      }
+    ],
+    "domainStrategy" : "IPOnDemand",
+    "rules" : [
+      {
+        "inboundTag" : [
+          "socks",
+          "http"
+        ],
+        "outboundTag" : "dns-out",
+        "port" : "53",
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "country",
+        "inboundTag" : [
+          "dns-proxy"
+        ],
+        "type" : "field"
+      },
+      {
+        "domain" : [
+          "geosite:private",
+          "geosite:category-ru",
+          "domain:ru",
+          "domain:su",
+          "domain:xn--p1ai"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "ip" : [
+          "geoip:private",
+          "geoip:ru"
+        ],
+        "outboundTag" : "direct",
+        "type" : "field"
+      },
+      {
+        "balancerTag" : "country",
+        "network" : "tcp,udp",
+        "type" : "field"
+      }
+    ]
+  }
+}
